@@ -42,11 +42,14 @@ body{
 }
 .ourList {
     display: flex;
-    
     align-items: flex-start;
-    
     flex-wrap: wrap;
     padding-left: 50px;
+    min-height:500px ;
+    margin: 20px;
+    background-color: #ac345284;
+    border-radius: 20px;
+    transition: 0.4s ease;
 
 }
 .input {
@@ -59,22 +62,22 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
-    margin-left: 20px;
+    
+    margin: 20px;
     border-radius: 19px;
     padding: 15px;
     /* display: inline-block; */
-    background-color: #fb205762;
+    background-color: #492bdf62;
 
-    max-width: 500px;
-    max-height: 900px;
+    max-width: 400px;
+    max-height: 500px;
     min-width: 200px;
     
 
   }
   .card img {
-    max-width: 500px;
-    max-height: 700px;
+    max-width: 300px;
+    max-height: 400px;
   }
   .my-button {
     
@@ -100,4 +103,15 @@ h1 {
 .hide {
     display: inline-block;
     
+}
+.savedElements {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    min-height:500px ;
+    margin: 20px;
+    background-color: #ac345284;
+    border-radius: 20px;
+    transition: 0.4s ease;
 }
