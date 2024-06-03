@@ -1,3 +1,7 @@
+/* Define --main-bg-color here */
+:root {
+    --main-color: #fb2056;
+  }
 *{
     margin: 0;
     padding: 0;
@@ -11,9 +15,20 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 }
-
+h1 {
+    text-align: center;
+    font-size: 48px;
+    color: #fb2057;
+}
+.input {
+    font-size: 20px;
+    color: white;
+    width: 300px;
+    padding: 0.5rem;
+    margin-top: 15px;
+    background-color: #fb205761;
+}
 .front{
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,87 +37,46 @@ body{
     padding: 50px;
     border-radius: 15px;
     color: white;
-    
-    
-    
 }
 
+
 .btn {
-    width: 150px;
-    border-radius: 10px;
-    padding: 0.5rem;
     margin-top: 15px;
-    background-color: #fb2057a4;
+    font-size: 15px;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: var(--main-color);
+    /* text-align: center; */
+    text-justify: center;
+    padding: 12px;
+    /* text-decoration: none; */
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+}
+.btn:hover {
+    background-color:#492bdf62 ;
 }
 .text {
     font-size: 30px;
     color: white;
     text-align: center;
+    padding: 10px 0;
 
 }
 .ourList {
-    display: flex;
+    display: inline-block;
     align-items: flex-start;
-    flex-wrap: wrap;
-    padding-left: 50px;
+    /* flex-wrap: wrap; */
+    
     min-height:500px ;
+    min-width: 300px;
     margin: 20px;
+    margin-left: 50px;
     background-color: #ac345284;
     border-radius: 20px;
     transition: 0.4s ease;
 
-}
-.input {
-    width: 300px;
-    padding: 0.5rem;
-    margin-top: 15px;
-}
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    margin: 20px;
-    border-radius: 19px;
-    padding: 15px;
-    /* display: inline-block; */
-    background-color: #492bdf62;
-
-    max-width: 400px;
-    max-height: 500px;
-    min-width: 200px;
-    
-
-  }
-  .card img {
-    max-width: 300px;
-    max-height: 400px;
-  }
-  .my-button {
-    
-    border: 0;
-    color: white;
-    padding: 15px 30px;
-    font-size: 16px;
-    border-radius: 20px;
-    transition: 0.4s ease;
-  }
-  .post-btn {
-    border: 1px solid black;
-    background-color: white;
-    width: 75px;
-    
-
-}
-h1 {
-    text-align: center;
-    font-size: 48px;
-}
-
-.hide {
-    display: inline-block;
-    
 }
 .savedElements {
     display: flex;
@@ -114,4 +88,40 @@ h1 {
     background-color: #ac345284;
     border-radius: 20px;
     transition: 0.4s ease;
+}
+.savedElements .fileInput{
+    display: none;
+}
+.savedElements .fileInput{
+    display: none;
+}
+.savedElements .save{
+    display: none;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 19px;
+    padding: 15px;
+    background-color: #492bdf62;
+    max-width: 400px;
+    max-height: 500px;
+    min-width: 200px;
+  }
+    .card img {
+    max-width: 300px;
+    max-height: 400px;
+  }
+
+
+.post-btn {
+    border: 1px solid black;
+    background-color: white;
+    width: 75px;
+}
+.hide {
+    display: inline-block;
 }

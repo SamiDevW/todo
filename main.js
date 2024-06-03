@@ -1,11 +1,10 @@
 // importing html elements
 let ourList = document.querySelector(".ourList");
+let savedElements = document.querySelector(".savedElements");
 let input = document.querySelector(".input");
 let addList = document.querySelector(".add");
 let delList = document.querySelector(".del");
-let saveGroupList = document.querySelector(".sav");
-let getDataBtn = document.querySelector(".get");
-let savedElements = document.querySelector(".savedElements");
+
 //
 getAllData();
 //Events for  html created Elements
@@ -17,7 +16,7 @@ input.addEventListener('keydown', (e) => {
         input.focus()
     }
 })
-getDataBtn.addEventListener("click", getAllData)
+
 // get data using its key
 function getData(key) {
     let data = JSON.parse(localStorage.getItem(key)) || [];
@@ -68,7 +67,7 @@ function createNewLi(text, imgSrc = '', target) {
     deleteBtn.addEventListener("click", () => { deleteCard(text) });
     //// save
     let saveBtn = document.createElement("button");
-    saveBtn.setAttribute('class', 'btn');
+    saveBtn.setAttribute('class', 'btn save');
     saveBtn.innerText = "save";
     card.appendChild(saveBtn);
     saveBtn.addEventListener("click", () => saveTodo(text, imgSrc));
@@ -131,6 +130,16 @@ function deleteCard(item) {
     localStorage.setItem('array', JSON.stringify(data));
     localStorage.setItem('arrayImg', JSON.stringify(dataImg));
     getAllData();
+    // when data are save get back event listeners
+    addList.addEventListener("click", createLi)
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            createLi();
+            input.focus()
+        }
+    })
+
+
 }
 // save the double data in 2 arrays
 function saveTodo(text) {
