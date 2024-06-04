@@ -88,9 +88,14 @@ h1 {
     padding: 10px 0;
 
 }
+.container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .ourList {
     display: inline-block;
-    align-items: flex-start;
     /* flex-wrap: wrap; */
     
     min-height:500px ;
@@ -135,12 +140,13 @@ h1 {
     padding: 15px;
     background-color: #492bdf62;
     max-width: 400px;
-    max-height: 500px;
+    
     min-width: 200px;
   }
     .card img {
     max-width: 300px;
     max-height: 400px;
+    border-radius: 15px;
   }
 
 

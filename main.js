@@ -43,6 +43,11 @@ function deleteAll() {
 }
 //card creation by users
 function createLi() {
+    let data = getData("array");
+    if (data.find(el => el === input.value) || input.value === '') {
+        alert('Existing todo or invalid input')
+        return
+    }
     createNewLi(input.value, null, ourList)
     input.value = "";
 }
@@ -149,12 +154,7 @@ function deleteCard(item) {
 function saveTodo(text) {
     let data = getData("array");
     let dataImg = getData("arrayImg");
-    if (data.find(el => el === text) || text === '') {
-        alert('Invalid text')
-        return
-    } else {
-        data.push(text)
-    }
+    data.push(text)
     // let index = data.indexOf(text);
     let img = document.querySelector(".preview img");
     let imgSrc = img;
