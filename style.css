@@ -1,6 +1,8 @@
 /* Define --main-bg-color here */
 :root {
     --main-color: #fb2056;
+    --btn-color:#0cbcdf62;
+    --btn-hover:#492bdf62;
   }
 *{
     margin: 0;
@@ -46,13 +48,35 @@ h1 {
     width: 150px;
     height: 50px;
     border-radius: 15px;
-    background-color: var(--main-color);
-    /* text-align: center; */
+    background-color: var(--btn-color);
+    text-align: center;
     text-justify: center;
     padding: 12px;
     /* text-decoration: none; */
     font-family: "Noto Sans", sans-serif;
     font-size: 14px;
+}
+.btnDiv{
+    display: flex;
+    align-items: center;
+    
+    
+}
+.save{
+    width: 50px;
+    padding: 5px;
+}
+.delete{
+    width: 50px;
+    font-size: 20px;
+}
+.fa-trash{
+    font-size: 20px;
+    color: red;
+}
+.fa-floppy-disk{
+    font-size: 30px;
+    color: rgb(44, 177, 197)
 }
 .btn:hover {
     background-color:#492bdf62 ;
@@ -88,6 +112,9 @@ h1 {
     background-color: #ac345284;
     border-radius: 20px;
     transition: 0.4s ease;
+}
+.savedElements .card {
+    border: solid 2px;
 }
 .savedElements .fileInput{
     display: none;

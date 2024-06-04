@@ -59,18 +59,22 @@ function createNewLi(text, imgSrc = '', target) {
     card.appendChild(list);
     /// appending img and btns for saving +delelting
     createContainer(card, imgSrc);
+    // butns container to style
+    let btnDiv = document.createElement('div')
+    btnDiv.setAttribute('class', 'btnDiv');
+    card.appendChild(btnDiv);
     //// delete
     let deleteBtn = document.createElement("button");
-    deleteBtn.setAttribute('class', 'btn');
-    deleteBtn.innerText = "Delete";
-    card.appendChild(deleteBtn);
+    deleteBtn.setAttribute('class', 'btn delete');
+    deleteBtn.innerHTML = '<i class="fa-solid fa-trash"></i>'
     deleteBtn.addEventListener("click", () => { deleteCard(text) });
+    btnDiv.appendChild(deleteBtn);
     //// save
     let saveBtn = document.createElement("button");
     saveBtn.setAttribute('class', 'btn save');
-    saveBtn.innerText = "save";
-    card.appendChild(saveBtn);
+    saveBtn.innerHTML = '<i class="fa-regular fa-floppy-disk "></i>'
     saveBtn.addEventListener("click", () => saveTodo(text, imgSrc));
+    btnDiv.appendChild(saveBtn);
     // text used to create the paragraph
     list.textContent = text;
     // remove  events to make the user make only one inoput at a time
