@@ -67,6 +67,7 @@ function createNewLi(text, imgSrc = '', target) {
     card.appendChild(list);
     /// appending img and btns for saving +delelting
     createContainer(card, imgSrc);
+
     // butns container to style
     let btnDiv = document.createElement('div')
     btnDiv.setAttribute('class', 'btnDiv');
@@ -96,11 +97,20 @@ function createNewLi(text, imgSrc = '', target) {
 }
 // Container of the image
 function createContainer(parent, imgSrc) {
+    // input type file
     let fileInput = document.createElement("input");
     fileInput.setAttribute('type', 'file');
     fileInput.setAttribute('class', 'fileInput');
     fileInput.setAttribute('name', 'image');
+    // depends on the parent we choose
     parent.appendChild(fileInput);
+    //label for input to design
+    let label = document.createElement('label')
+    label.setAttribute('class', 'inputLabel')
+    label.setAttribute('for', 'fileInput')
+    label.innerHTML = 'Upload Image'
+    parent.appendChild(label)
+    // preview div
     let div = document.createElement("div");
     div.setAttribute('class', 'preview');
     parent.appendChild(div)
