@@ -44,12 +44,15 @@ function deleteAll() {
 //card creation by users
 function createLi() {
     let data = getData("array");
+    console.log(data)
     if (data.find(el => el === input.value) || input.value === '') {
         alert('Existing todo or invalid input')
         return
+    } else {
+        createNewLi(input.value, null, ourList)
+        input.value = "";
     }
-    createNewLi(input.value, null, ourList)
-    input.value = "";
+
 }
 
 // default card creating for saved data and users
