@@ -21,6 +21,7 @@ btnVertical.addEventListener('click', () => {
         savedEl.style.flexDirection = 'row';
         savedElements.forEach(x => {
             x.style.flexDirection = 'column'
+
         })
     }
 

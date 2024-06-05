@@ -13,12 +13,14 @@ btnCollapse.addEventListener('click', () => {
             element.style.display = "none"
             savedElements.style.marginBottom = '600px'
             savedElements.style.width = '20px'
+
         }
         else if (element.style.display === "none") {
             btnCollapse.textContent = 'COLLAPSE'
             element.style.display = "flex"
             savedElements.style.marginBottom = '20px'
             savedElements.style.width = "fit-content"
+            // savedElements.style.maxWidth = "500px"
 
         }
         else if (element.style.display === 'flex') {

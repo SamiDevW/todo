@@ -100,6 +100,7 @@ h1 {
 .text {
     font-size: 30px;
     color: var(--text-color);
+    max-width: 1000px;
     text-align: center;
     padding: 10px 0;
     background-color: var(--main-color);
