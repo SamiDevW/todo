@@ -8,7 +8,7 @@ btnCollapse.addEventListener('click', () => {
         console.log(element.style);
         // element style seem to be empty when i create the element with js
         if (element.style.display === "") {
-            element.style.margin = "200px"
+
             element.style.display = "none"
         } else if (element.style.display === "none") {
 
@@ -16,7 +16,7 @@ btnCollapse.addEventListener('click', () => {
         }
         else if (element.style.display === 'flex') {
             element.style.display = "none"
-            element.style.margin = "200px"
+
         }
 
 
