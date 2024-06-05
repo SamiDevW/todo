@@ -102,6 +102,9 @@ function createContainer(parent, imgSrc) {
     fileInput.setAttribute('type', 'file');
     fileInput.setAttribute('class', 'fileInput');
     fileInput.setAttribute('name', 'image');
+    // id for the label
+    fileInput.setAttribute('id', 'fileInput');
+
     // depends on the parent we choose
     parent.appendChild(fileInput);
     //label for input to design
