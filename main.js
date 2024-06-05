@@ -1,3 +1,4 @@
+
 // importing html elements
 let ourList = document.querySelector(".ourList");
 let savedElements = document.querySelector(".savedElements");
@@ -5,9 +6,11 @@ let input = document.querySelector(".input");
 let addList = document.querySelector(".add");
 let delList = document.querySelector(".del");
 
+
 //
 getAllData();
 //Events for  html created Elements
+
 delList.addEventListener("click", deleteAll)
 addList.addEventListener("click", createLi)
 input.addEventListener('keydown', (e) => {
@@ -170,12 +173,12 @@ function deleteCard(item) {
 function saveTodo(text) {
     let data = getData("array");
     let dataImg = getData("arrayImg");
-    data.push(text)
+    data.unshift(text)
     // let index = data.indexOf(text);
     let img = document.querySelector(".preview img");
     let imgSrc = img;
     // let imgSrc = img[index];
-    dataImg.push(imgSrc.src)
+    dataImg.unshift(imgSrc.src)
 
     localStorage.setItem('array', JSON.stringify(data));
     localStorage.setItem('arrayImg', JSON.stringify(dataImg));
