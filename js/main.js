@@ -4,7 +4,8 @@ import { localImport } from "./modules/localImport.js";
 // importing html elements
 let ourList = document.querySelector(".ourList");
 let savedElements = document.querySelector(".savedElements");
-let input = document.querySelector(".input");
+let inputTodo = document.querySelector(".todo");
+let inputSearch = document.querySelector(".search");
 let addList = document.querySelector(".add");
 let delList = document.querySelector(".del");
 let btnVertical = document.querySelector('.vertical');
@@ -13,8 +14,9 @@ getAllData();
 //Events for  html created Elements
 delList.addEventListener("click", deleteAll)
 addList.addEventListener("click", createLi)
-input.addEventListener('keyup', keyUp)
+inputTodo.addEventListener('keyup', keyUp)
 btnCollapse.addEventListener('click', collapseList)
+btnVertical.addEventListener('click', verticalMode)
 // get saved data (img + text)
 function getAllData() {
     ourList.innerHTML = "";
@@ -37,12 +39,12 @@ function deleteAll() {
 function createLi() {
     let data = localImport("array");
     console.log(data)
-    if (data.find(el => el === input.value) || input.value === '') {
+    if (data.find(el => el === inputTodo.value) || inputTodo.value === '') {
         alert('Existing todo or invalid input')
         return
     } else {
-        createNewLi(input.value, null, ourList)
-        input.value = "";
+        createNewLi(inputTodo.value, null, ourList)
+        inputTodo.value = "";
     }
 
 }
@@ -78,7 +80,7 @@ function createNewLi(text, imgSrc = '', target) {
     list.textContent = text;
     // remove  events to make the user make only one inoput at a time
     addList.removeEventListener("click", createLi)
-    input.removeEventListener('keyup', keyUp)
+    inputTodo.removeEventListener('keyup', keyUp)
 }
 // Container of the image
 function createContainer(parent, imgSrc) {
@@ -142,7 +144,7 @@ function deleteCard(item) {
     getAllData();
     // when data are save get back event listeners
     addList.addEventListener("click", createLi)
-    input.addEventListener('keyup', keyUp)
+    inputTodo.addEventListener('keyup', keyUp)
 
 
 }
@@ -162,17 +164,35 @@ function saveTodo(text) {
     getAllData();
     // when data are save get back event listeners
     addList.addEventListener("click", createLi)
-    input.addEventListener('keyup', keyUp)
+    inputTodo.addEventListener('keyup', keyUp)
 
 }
 function keyUp(e) {
 
     if (e.key === 'Enter') {
         createLi();
-        input.focus()
+        inputTodo.focus()
     }
 
 
 }
-btnVertical.addEventListener('click', verticalMode)
 
+
+inputSearch.addEventListener('keyup', (e) => {
+    // let savedText = document.querySelectorAll(".savedElements .card .text");
+    // let savedTextArray = [];
+    // savedText.forEach(x => {
+    //     savedTextArray.push(x.textContent);
+
+    // });
+    let data = localImport("array");
+    let dataImg = localImport("arrayImg");
+    let q = e.target.value;
+    let filteredSaved = data.filter(x => x.toLowerCase().includes(q));
+    console.log(filteredSaved);
+    savedElements.innerHTML = '';
+    for (let i = 0; i < filteredSaved.length; i++) {
+        createNewLi(filteredSaved[i], dataImg[i], savedElements);
+    }
+
+})

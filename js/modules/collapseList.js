@@ -1,10 +1,12 @@
 
 export let btnCollapse = document.querySelector('.collapse');
+let savedElements = document.querySelector(".savedElements");
 export function collapseList() {
 
     let saved = document.querySelectorAll(".savedElements .card");
+    console.log(saved);
     saved.forEach(element => {
-        console.log(element.style);
+
         // element style seem to be empty when i create the element with js
         if (window.getComputedStyle(element).display === 'flex') {
             btnCollapse.textContent = 'SHOW'
