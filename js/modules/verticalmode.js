@@ -1,14 +1,6 @@
-let btnVertical = document.querySelector('.vertical');
-let savedEl = document.querySelector('.savedElements')
-
-
-
-btnVertical.addEventListener('click', () => {
-
-    console.log(document.getElementsByClassName('savedElements'));
+export function verticalMode() {
+    let savedEl = document.querySelector('.savedElements')
     let savedElements = document.querySelectorAll(".savedElements .card");
-    console.log(getComputedStyle(savedEl));
-
     if (window.getComputedStyle(savedEl).flexDirection === 'row') {
         savedEl.style.flexDirection = 'column';
         savedElements.forEach(x => {
@@ -28,7 +20,4 @@ btnVertical.addEventListener('click', () => {
         })
     }
 
-
-
-
-})
+}
