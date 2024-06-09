@@ -16,7 +16,7 @@
 body {
     height: 100vh;
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./mangas-photos/Japan-2107x1406.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../mangas-photos/Japan-2107x1406.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
