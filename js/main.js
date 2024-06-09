@@ -1,5 +1,5 @@
 import { verticalMode } from "./modules/verticalmode.js";
-import { collapseList } from "./modules/collapseList.js";
+import { collapseList, btnCollapse } from "./modules/collapseList.js";
 import { localImport } from "./modules/localImport.js";
 // importing html elements
 let ourList = document.querySelector(".ourList");
@@ -8,7 +8,7 @@ let input = document.querySelector(".input");
 let addList = document.querySelector(".add");
 let delList = document.querySelector(".del");
 let btnVertical = document.querySelector('.vertical');
-let btnCollapse = document.querySelector('.collapse');
+
 getAllData();
 //Events for  html created Elements
 delList.addEventListener("click", deleteAll)

@@ -1,4 +1,5 @@
 
+export let btnCollapse = document.querySelector('.collapse');
 export function collapseList() {
 
     let saved = document.querySelectorAll(".savedElements .card");
