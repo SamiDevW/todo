@@ -10,6 +10,7 @@ Takes the 'text' => input.value => p.textContent to target specific elements
 if autosave is used the input.value is used directly(autosave is complicated using images)
 
 # bug with keydown enter (works but shows repeated alert ) // bug fixed with keyup
+#searchBar added depending on textContent but code to optimise
 
 
 
