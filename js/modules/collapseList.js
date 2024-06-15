@@ -1,13 +1,11 @@
-
 export let btnCollapse = document.querySelector('.collapse');
 let savedElements = document.querySelector(".savedElements");
 export function collapseList() {
     let saved = document.querySelectorAll(".savedElements .card");
     console.log(saved);
     saved.forEach(element => {
-        // element style seem to be empty when i create the element with js
         if (window.getComputedStyle(element).display === 'flex') {
-            btnCollapse.innerHTML = '<i class="fa-solid fa-square-minus"></i>'
+            btnCollapse.innerHTML = '<i class="fa-regular fa-square-minus"></i>'
             element.style.display = "none"
             savedElements.style.marginBottom = '600px'
             savedElements.style.width = '20px'
@@ -18,7 +16,6 @@ export function collapseList() {
             savedElements.style.marginBottom = '20px'
             savedElements.style.width = "fit-content"
         }
-
     });
 
 }

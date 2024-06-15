@@ -1,11 +1,10 @@
 import { deleteCard } from "./deleteCard.js";
-export function displayTodo(parent, source, texts) {
-
+export function displayTodo(parent, source, text) {
     let card = document.createElement('div');
     card.setAttribute('class', 'card');
     parent.appendChild(card);
     card.innerHTML = `
-        <p class="text">${texts}</p>
+        <p class="text">${text}</p>
         <input type="file" class="fileInput" name="image" id="fileInput">
         <label for="fileInput"  class="inputLabel">Upload Image</label>
         <div class="preview">
@@ -16,11 +15,13 @@ export function displayTodo(parent, source, texts) {
                 <button class="btn save"><i class="fa-regular fa-floppy-disk "></i></button>
             </div>
         `
-
-    // let presentText = document.querySelector(".savedElements .text").getAttribute('textContent');
-    // console.log(presentText);
-    document.querySelector(".delete").addEventListener("click", () => { deleteCard(texts) })
-
+    document.addEventListener('DOMContentLoaded', () => {
+        let dels = card.querySelector(".delete")
+        dels.addEventListener("click", () => {
+            parent.removeChild(card);
+            deleteCard(text)
+        })
+    });
 
 
 }
