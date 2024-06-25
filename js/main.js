@@ -7,6 +7,7 @@ import { clearLocalArrays } from "./modules/clearLocalArrays.js";
 import { loadImg } from "./modules/loadImg.js"
 // HTML SELECTORS:
 let ourList = document.querySelector(".ourList");
+
 let savedElements = document.querySelector(".savedElements");
 let inputTodo = document.querySelector(".todo");
 let inputSearch = document.querySelector(".search");
@@ -18,12 +19,22 @@ getSavedData();
 // EVENTS :
 delList.addEventListener("click", clearLocalArrays)
 addList.addEventListener("click", () => {
+
     if (ourList.innerHTML === '') {
         todoInputArea();
         inputTodo.focus();
         inputTodo.value = '';
     }
+    let deleteInput = document.querySelector(".ourList .delete");
+    if (deleteInput) {
+
+        deleteInput.addEventListener('click', () => {
+            ourList.innerHTML = '';
+        })
+    }
+
 })
+// 
 inputTodo.addEventListener('keyup', keyUp)
 btnCollapse.addEventListener('click', collapseList)
 btnVertical.addEventListener('click', orientationMode)
