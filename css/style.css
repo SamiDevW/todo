@@ -346,11 +346,16 @@ input[type=file] {
     .ourList,
     .savedElements {
         /* width: 20% !important; */
-        min-width: none;
+        max-width: 80%;
         margin: 20px 0;
     }
 
     .card {
         width: 80%;
     }
+
+    .card img {
+        width: 80%;
+    }
+
 }
