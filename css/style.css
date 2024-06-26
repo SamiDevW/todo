@@ -156,7 +156,7 @@ h1 {
 .ourList {
     display: inline-block;
     min-height: 50px;
-    min-width: 400px;
+    min-width: 50px;
     margin: 20px;
     margin-left: 50px;
     background-color: var(--container-color);
@@ -294,4 +294,63 @@ input[type=file] {
     border: 1px solid #ddd;
     border-radius: var(--radius);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+    .nav-link {
+        font-size: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+
+
+    .input {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .collapse {
+        width: 20%;
+    }
+
+    .responsiveEvents {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        margin: 20px;
+        gap: 20px;
+    }
+
+    .vertical {
+        display: none;
+    }
+
+    .text {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .front {
+        width: 80%;
+        margin: auto;
+    }
+
+    .ourList,
+    .savedElements {
+        /* width: 20% !important; */
+        min-width: none;
+        margin: 20px 0;
+    }
+
+    .card {
+        width: 80%;
+    }
 }
