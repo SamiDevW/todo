@@ -177,7 +177,7 @@ h1 {
     align-items: flex-start;
     width: fit-content;
     flex-wrap: wrap;
-    padding: 20px;
+    /* padding: 20px; */
     min-height: 10px;
     min-width: 10px;
     margin: 20px;
@@ -344,31 +344,48 @@ input[type=file] {
 
     .ourList,
     .savedElements {
-        max-width: 80%;
-
-
+        width: 80%;
+        width: fit-content;
     }
 
     .savedElements {
-        max-width: 80%;
         margin: auto;
         margin-bottom: 500px;
     }
 
     .ourList {
-        max-width: 80%;
         margin: auto;
         margin-bottom: 300px;
         margin-top: 20px;
 
     }
 
+    .preview {
+        display: flex;
+        justify-content: center;
+
+    }
+
     .card {
         width: 80%;
+
     }
 
     .card img {
-        width: 100%;
+
+        width: 80%;
     }
 
+}
+
+@media (max-width: 767px) {
+
+    .card {
+        /* width: 60%; */
+    }
+
+    .text {
+        text-wrap: wrap;
+
+    }
 }
