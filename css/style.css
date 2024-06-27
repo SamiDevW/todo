@@ -97,6 +97,7 @@ h1 {
 .btnDiv {
     display: flex;
     align-items: center;
+    gap: 5px;
 
 
 }
