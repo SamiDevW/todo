@@ -15,13 +15,9 @@ export function displayTodo(parent, source, text) {
                 <button class="btn save"><i class="fa-regular fa-floppy-disk "></i></button>
             </div>
         `
-    document.addEventListener('DOMContentLoaded', () => {
-        let dels = card.querySelector(".delete")
-        dels.addEventListener("click", () => {
-            parent.removeChild(card);
-            deleteCard(text)
-        })
+    let dels = card.querySelector(".delete")
+    dels.addEventListener("click", () => {
+        parent.removeChild(card);
+        deleteCard(text)
     });
-
-
 }

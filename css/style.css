@@ -307,8 +307,6 @@ input[type=file] {
         font-size: 36px;
     }
 
-
-
     .input {
         width: 100%;
     }
@@ -345,9 +343,23 @@ input[type=file] {
 
     .ourList,
     .savedElements {
-        /* width: 20% !important; */
         max-width: 80%;
-        margin: 20px 0;
+
+
+    }
+
+    .savedElements {
+        max-width: 80%;
+        margin: auto;
+        margin-bottom: 500px;
+    }
+
+    .ourList {
+        max-width: 80%;
+        margin: auto;
+        margin-bottom: 300px;
+        margin-top: 20px;
+
     }
 
     .card {
@@ -355,7 +367,7 @@ input[type=file] {
     }
 
     .card img {
-        width: 80%;
+        width: 100%;
     }
 
 }
