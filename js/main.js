@@ -39,7 +39,7 @@ inputTodo.addEventListener('keyup', keyUp)
 btnCollapse.addEventListener('click', collapseList)
 btnVertical.addEventListener('click', orientationMode)
 inputSearch.addEventListener('keyup', (e) => {
-    let q = e.target.value;
+    let q = e.target.value.toLowerCase();
     let filteredSaved = data.filter(x => x.post.toLowerCase().includes(q));
     savedElements.innerHTML = '';
     filteredSaved.forEach(x => {
