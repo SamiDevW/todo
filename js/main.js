@@ -1,5 +1,5 @@
 //FUNCTIONS IMPORT :
-import { orientationMode } from "./modules/orientationMode.js";
+
 import { collapseList, btnCollapse } from "./modules/collapseList.js";
 import { localImport } from "./modules/localImport.js";
 import { displayTodo } from "./modules/displayTodo.js";
@@ -37,7 +37,6 @@ addList.addEventListener("click", () => {
 // 
 inputTodo.addEventListener('keyup', keyUp)
 btnCollapse.addEventListener('click', collapseList)
-btnVertical.addEventListener('click', orientationMode)
 inputSearch.addEventListener('keyup', (e) => {
     let q = e.target.value.toLowerCase();
     let filteredSaved = data.filter(x => x.post.toLowerCase().includes(q));

@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>TodoList</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>やること帳 / TodoList</title>
+    </head>
 
-<body>
-    <header>
-        <div class="nav-link">
-            <a href="https://samidevw.github.io/portfolioIntro/">HOME</a>
-        </div>
-    </header>
-    <main>
-        <section class="front">
-            <h1>TodoList</h1>
-            <input type="text" class="input todo" placeholder="Enter a Todo...">
-            <div class="btns">
-                <button class="add btn">AddElement</button>
-                <button class="del btn">ClearData</button>
+    <body>
+        <header>
+            <div class="nav-link">
+                <a href="https://samidevw.github.io/portfolioIntro/"><i class="fa-solid fa-house"></i></a>
             </div>
-        </section>
-        <div class="container">
-            <section class="ourList"></section>
-        </div>
-        <div class="responsiveEvents">
-            <input type="text" class="input search" placeholder="SEARCH...">
-            <button class="btn collapse"><i class="fa-solid fa-square-minus"></i></button>
-            <button class="btn vertical"><i class="fa-solid fa-arrow-right"></i></button>
-        </div>
+        </header>
+        <main>
+            <section class="front-container">
+                <div class="front">
+                    <h1>やること帳 / TodoList</h1>
+                    <input type="text" class="input todo" placeholder="Enter a Todo...">
+                    <div class="btns">
+                        <button class="add btn"><i class="fa-regular fa-note-sticky"></i></button>
+                        <button class="del btn"><i class="fa-solid fa-eraser"></i></button>
+                    </div>
+                </div>
+            </section>
+            <div class="container">
+                <section class="ourList"></section>
+            </div>
+            <section class="responsiveEvents">
+                <div class="serachBar">
+                    <input type="text" class="input search" placeholder="SEARCH...">
+                    <button class="btn collapse"><i class="fa-solid fa-square-minus"></i></button>
+                </div>
+            </section>
+            <section class="savedContainer">
+                <div class="savedElements"></div>
+            </section>
+        </main>
 
-        <section class="savedElements">
+        <footer>
+            <div class="footer">
+                <p>MY TODOLIST</p>
+            </div>
 
-        </section>
-    </main>
-    <footer>
-        <div class="footer">
-            <p>MY TODOLIST</p>
-        </div>
-    </footer>
-    <script type="module" src="./js/main.js"></script>
-    <script src="https://kit.fontawesome.com/b5ec06757b.js" crossorigin="anonymous"></script>
-</body>
+        </footer>
+
+        <script type="module" src="./js/main.js"></script>
+
+        <script src="https://kit.fontawesome.com/b5ec06757b.js" crossorigin="anonymous"></script>
+    </body>
 
 </html>
